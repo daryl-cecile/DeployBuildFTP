@@ -18,6 +18,8 @@ async function main(){
         };
         // const token = core.getInput("repo-token",{required:true});
         // const client = new github.GitHub(token);
+        
+        console.log("trying with", gitPath);
 
         await exec.exec("git", ["checkout"]);
 
