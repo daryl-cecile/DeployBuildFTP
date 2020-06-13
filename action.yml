@@ -7,7 +7,7 @@ inputs:
     default: ${{ github.token }}
   rule-file:
     description: "The path to the deploy rules file"
-    required: true
+    required: false
     default: ".deploybuild"
   ftp-user:
     description: "The username to use for the FTP request"
@@ -24,7 +24,7 @@ inputs:
     default: '21'
   ftp-destination:
     description: "The folder where the files should end up on the FTP Server"
-    required: true
+    required: false
     default: "./"
   opt-clean:
     description: "Whether the destination folder should be cleaned up before pushing files"
