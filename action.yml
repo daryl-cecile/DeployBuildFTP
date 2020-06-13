@@ -30,6 +30,10 @@ inputs:
     description: "Whether the destination folder should be cleaned up before pushing files"
     required: false
     default: 'false'
+  node-version:
+    description: "The version of node to use (default: 12.x)"
+    required: false
+    default: "12.x"
 runs:
   using: "node12"
   main: "src/index.js"
