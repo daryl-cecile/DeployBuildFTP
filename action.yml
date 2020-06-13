@@ -26,6 +26,10 @@ inputs:
     description: "The folder where the files should end up on the FTP Server"
     required: false
     default: "./"
+  source-root:
+    description: "The directory from which the sources should be uploaded"
+    required: false
+    default: "./"
   opt-clean:
     description: "Whether the destination folder should be cleaned up before pushing files"
     required: false
