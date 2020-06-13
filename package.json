@@ -1,0 +1,15 @@
+{
+  "name": "deploy-build-ftp",
+  "version": "0.1.2",
+  "description": "Use FTP to deploy built files to your server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Daryl Cecile <darylcecile@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@actions/core": "^1.2.4",
+    "@actions/github": "^3.0.0"
+  }
+}

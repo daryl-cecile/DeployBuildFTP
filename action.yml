@@ -1,0 +1,38 @@
+name: "Deploy Build"
+description: "Deploy generated files to FTP Server"
+inputs:
+  repo-token:
+    description: "Personal access token (PAT) used to fetch the repository."
+    required: true
+    default: ${{ github.token }}
+  rule-file:
+    description: "The path to the deploy rules file"
+    required: true
+    default: ".deploybuild"
+  ftp-user:
+    description: "The username to use for the FTP request"
+    required: true
+  ftp-password:
+    description: "The password to use for FTP authentication"
+    required: true
+  ftp-host:
+    description: "The host to use for FTP connection"
+    required: true
+  ftp-port:
+    description: "The port to use for the connection (defaults to 21)"
+    required: false
+    default: '21'
+  ftp-destination:
+    description: "The folder where the files should end up on the FTP Server"
+    required: true
+    default: "./"
+  opt-clean:
+    description: "Whether the destination folder should be cleaned up before pushing files"
+    required: false
+    default: 'false'
+runs:
+  using: "node12"
+  main: "src/index.js"
+branding:
+  icon: 'wifi'
+  color: 'blue'
